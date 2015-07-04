@@ -14,6 +14,10 @@ a 48-hour hackathon.
 
 //TODO
 
+## Data sets used
+
+//TODO
+
 ## Running
 
 To serve the content locally as a static web server:
@@ -25,9 +29,11 @@ npm i -g puer
 
 ## Team
 
-[Tim Paris](https://github.com/paristj)
-[Roslyn Baker](https://github.com/thirstycreative)
-[Brendan Graetz](http://bguiz.com)
+Somo is brought to you by:
+
+- [Tim Paris](https://github.com/paristj)
+- [Roslyn Baker](https://github.com/thirstycreative)
+- [Brendan Graetz](http://bguiz.com)
 
 ## Contributing
 

@@ -18,27 +18,22 @@ xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
   });
 });
 
-function startLeaflet(context) {
-  context = context || {};
+function startLeaflet(initContext) {
+  var context;
 
-  var geoJsonData = context.geoJsonData;
+  var geoJsonData;
+  var getRegionName;
+  var getPropertyValue;
+  var getPropertyDisplayName;
+  var getPropertyColour;
 
-  var getRegionName = context.getName || defaultGetRegionName;
-  function defaultGetRegionName(props) {
-    return props.name;
-  }
-  var getPropertyValue = context.getPropertyValue || defaultGetPropertyValue;
-  function defaultGetPropertyValue(props) {
-    return props.value;
-  }
-  var getPropertyDisplayName = context.getPropertyDisplayName || defaultGetPropertyDisplayName;
-  function defaultGetPropertyDisplayName(props) {
-    return 'Value';
-  }
-  var getPropertyColour = context.getPropertyColour || defaultGetPropertyColour;
-  function defaultGetPropertyColour(props) {
-    return getPropertyColourFromValue(getPropertyValue(props) / 1000000)
-  }
+  var map;
+  var geoJsonLayer;
+  var infoControl;
+  var legendControl;
+
+  map = L.map('map');
+
   var colourScale = chroma
     .scale(
       ['#eda0ff', '#002680'], // colors
@@ -46,22 +41,54 @@ function startLeaflet(context) {
       )
       .domain([1, 10000000], 7, 'log')
       .mode('rgb');
-  function getPropertyColourFromValue(d) {
-    return colourScale(d);
-  }
-
-  var map;
-  var info;
-  var geoJsonLayer;
-  var legend;
-
-  map = L.map('map');
-
+  setContext(initContext);
   addTiles();
   addInfoControl();
   addGeoJsonLayer();
   addAttributionControl();
   addLegendControl();
+
+  return {
+    add: {
+      tiles: addTiles,
+      infoControl: addInfoControl,
+      geoJsonLayer: addGeoJsonLayer,
+      attributionControl: addAttributionControl,
+      legendControl: addLegendControl,
+    },
+    set: {
+      context: setContext,
+    },
+  };
+
+  function defaultGetRegionName(props) {
+    return props.name;
+  }
+
+  function defaultGetPropertyValue(props) {
+    return props.value;
+  }
+
+  function defaultGetPropertyDisplayName(props) {
+    return 'Value';
+  }
+
+  function defaultGetPropertyColour(props) {
+    return getPropertyColourFromValue(getPropertyValue(props) / 1000000)
+  }
+
+  function getPropertyColourFromValue(d) {
+    return colourScale(d);
+  }
+
+  function setContext(context) {
+    context = context || {};
+    geoJsonData = context.geoJsonData;
+    getRegionName = context.getName || defaultGetRegionName;
+    getPropertyValue = context.getPropertyValue || defaultGetPropertyValue;
+    getPropertyDisplayName = context.getPropertyDisplayName || defaultGetPropertyDisplayName;
+    getPropertyColour = context.getPropertyColour || defaultGetPropertyColour;
+  }
 
   function addTiles() {
     map
@@ -79,15 +106,15 @@ function startLeaflet(context) {
 
   function addInfoControl() {
     // control that shows state info on hover
-    info = L.control();
+    infoControl = L.control();
 
-    info.onAdd = function (map) {
+    infoControl.onAdd = function (map) {
       this._div = L.DomUtil.create('div', 'info');
       this.update();
       return this._div;
     };
 
-    info.update = function (props) {
+    infoControl.update = function (props) {
       this._div.innerHTML = '<h4>Australia</h4>' +
       (props ?
         '<b>' + getRegionName(props) + '</b><br />' +
@@ -95,7 +122,7 @@ function startLeaflet(context) {
         : 'Hover over a region');
     };
 
-    info.addTo(map);
+    infoControl.addTo(map);
   }
 
   function addGeoJsonLayer() {
@@ -125,13 +152,14 @@ function startLeaflet(context) {
         layer.bringToFront();
       }
 
-      info.update(
+      infoControl.update(
         layer.feature.properties);
     }
+
     function resetHighlight(e) {
       geoJsonLayer.resetStyle(
         e.target);
-      info.update();
+      infoControl.update();
     }
 
     function zoomToFeature(e) {
@@ -145,6 +173,14 @@ function startLeaflet(context) {
         mouseout: resetHighlight,
         click: zoomToFeature
       });
+    }
+
+    if (!!geoJsonLayer &&
+        map.hasLayer(geoJsonLayer)) {
+      // If there is an existing geoJsonLayer,
+      // remove it before re-adding the new one.
+      // This is done when we wish to refresh the data
+      map.removeLayer(geoJsonLayer);
     }
 
     geoJsonLayer = L.geoJson(geoJsonData, {
@@ -161,11 +197,11 @@ function startLeaflet(context) {
   }
 
   function addLegendControl() {
-    legend = L.control({
+    legendControl = L.control({
       position: 'bottomright'
     });
 
-    legend.onAdd = function (map) {
+    legendControl.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
         grades = colourScale.domain(),
@@ -186,7 +222,7 @@ function startLeaflet(context) {
       return div;
     };
 
-    legend.addTo(map);
+    legendControl.addTo(map);
   }
 }
 

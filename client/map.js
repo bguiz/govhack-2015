@@ -1,5 +1,19 @@
 'use strict';
 
+var leafletController;
+leafletController = initLeafletController({
+  // geoJsonData: result,
+  getPropertyValue: function getPropertyValue(props) {
+    return props.area;
+  },
+  getPropertyDisplayName: function getPropertyDisplayName(props) {
+    return 'Area';
+  },
+});
+leafletController.add.infoControl();
+leafletController.add.attributionControl();
+leafletController.add.legendControl();
+
 xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
   if (err) {
     console.error(err);
@@ -7,18 +21,27 @@ xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
   }
   result = JSON.parse(result);
   console.log('geoJsonData:', result);
-  startLeaflet({
-    geoJsonData: result,
-    getPropertyValue: function getPropertyValue(props) {
-      return props.area;
-    },
-    getPropertyDisplayName: function getPropertyDisplayName(props) {
-      return 'Area';
-    },
-  });
+
+  leafletController.add.tiles();
+  leafletController.add.geoJsonLayer(result);
+  // testUpdateDummyData(result);
 });
 
-function startLeaflet(initContext) {
+function testUpdateDummyData(result) {
+  // modify one chloropleth rendering affecting property,
+  // and another that does not.
+  // simply delay for a few second to simulate changing the dataset
+  setTimeout(function() {
+    result.features.map(function eachFeature(feature) {
+      feature.properties.area = feature.properties.area * 10;
+      feature.properties.name = feature.properties.name + ' (m)';
+      return feature;
+    });
+    leafletController.add.geoJsonLayer(result);
+  }, 3000);
+}
+
+function initLeafletController(initContext) {
   var context;
 
   var geoJsonData;
@@ -42,11 +65,6 @@ function startLeaflet(initContext) {
       .domain([1, 10000000], 7, 'log')
       .mode('rgb');
   setContext(initContext);
-  addTiles();
-  addInfoControl();
-  addGeoJsonLayer();
-  addAttributionControl();
-  addLegendControl();
 
   return {
     add: {
@@ -83,7 +101,6 @@ function startLeaflet(initContext) {
 
   function setContext(context) {
     context = context || {};
-    geoJsonData = context.geoJsonData;
     getRegionName = context.getName || defaultGetRegionName;
     getPropertyValue = context.getPropertyValue || defaultGetPropertyValue;
     getPropertyDisplayName = context.getPropertyDisplayName || defaultGetPropertyDisplayName;
@@ -125,7 +142,9 @@ function startLeaflet(initContext) {
     infoControl.addTo(map);
   }
 
-  function addGeoJsonLayer() {
+  function addGeoJsonLayer(data) {
+    geoJsonData = data;
+
     function style(feature) {
       return {
         weight: 2,

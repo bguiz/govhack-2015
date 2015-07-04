@@ -14,12 +14,15 @@ leafletController.add.infoControl();
 leafletController.add.attributionControl();
 leafletController.add.legendControl();
 
+var geoJsonResult;
+
 xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
   if (err) {
     console.error(err);
     return;
   }
   result = JSON.parse(result);
+  geoJsonResult = result;
   console.log('geoJsonData:', result);
 
   leafletController.add.tiles();
@@ -49,6 +52,7 @@ function initLeafletController(initContext) {
   var getPropertyValue;
   var getPropertyDisplayName;
   var getPropertyColour;
+  var getPropertyColourDomain;
 
   var map;
   var geoJsonLayer;
@@ -57,10 +61,10 @@ function initLeafletController(initContext) {
 
   map = L.map('map');
 
-  var colourScale = chroma
+  var defaultColourScale = window.chroma
     .scale(
-      ['#eda0ff', '#002680'], // colors
-      [0, 1]  // positions
+        ['#eda0ff', '#002680'], // colors
+        [0, 1]  // positions
       )
       .domain([1, 10000000], 7, 'log')
       .mode('rgb');
@@ -92,11 +96,15 @@ function initLeafletController(initContext) {
   }
 
   function defaultGetPropertyColour(props) {
-    return getPropertyColourFromValue(getPropertyValue(props) / 1000000)
+    return getPropertyColourFromValue(getPropertyValue(props))
+  }
+
+  function defaultGetPropertyColourDomain() {
+    return defaultColourScale.domain();
   }
 
   function getPropertyColourFromValue(d) {
-    return colourScale(d);
+    return defaultColourScale(d);
   }
 
   function setContext(context) {
@@ -105,6 +113,7 @@ function initLeafletController(initContext) {
     getPropertyValue = context.getPropertyValue || defaultGetPropertyValue;
     getPropertyDisplayName = context.getPropertyDisplayName || defaultGetPropertyDisplayName;
     getPropertyColour = context.getPropertyColour || defaultGetPropertyColour;
+    getPropertyColourDomain = context.getPropertyColourDomain || defaultGetPropertyColourDomain;
   }
 
   function addTiles() {
@@ -216,6 +225,13 @@ function initLeafletController(initContext) {
   }
 
   function addLegendControl() {
+    if (!!legendControl) {
+      // If there is an existing legendControl,
+      // remove it before re-adding the new one.
+      // This is done when we wish to refresh the data
+      legendControl.removeFrom(map);
+    }
+
     legendControl = L.control({
       position: 'bottomright'
     });
@@ -223,13 +239,13 @@ function initLeafletController(initContext) {
     legendControl.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
-        grades = colourScale.domain(),
+        grades = getPropertyColourDomain(),
         labels = [],
         from, to;
 
       for (var i = 0; i < grades.length; i++) {
-        from = grades[i];
-        to = grades[i + 1];
+        from = parseInt(grades[i], 10);
+        to = parseInt(grades[i + 1], 10);
 
         labels.push(
           '<i style="background:' + getPropertyColourFromValue(from + 1) + '"></i> ' +
@@ -243,24 +259,4 @@ function initLeafletController(initContext) {
 
     legendControl.addTo(map);
   }
-}
-
-function xhrGet(url, onGot) {
-  var request = new XMLHttpRequest();
-  request.open('GET', url, true);
-
-  request.onreadystatechange = function() {
-    if (this.readyState === 4) {
-      if (this.status >= 200 && this.status < 400) {
-        // Success!
-        onGot(undefined, this.responseText);
-      } else {
-        // Error :(
-        onGot(this, this.responseText)
-      }
-    }
-  };
-
-  request.send();
-  request = null;
 }

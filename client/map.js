@@ -14,12 +14,15 @@ leafletController.add.infoControl();
 leafletController.add.attributionControl();
 leafletController.add.legendControl();
 
+var geoJsonResult;
+
 xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
   if (err) {
     console.error(err);
     return;
   }
   result = JSON.parse(result);
+  geoJsonResult = result;
   console.log('geoJsonData:', result);
 
   leafletController.add.tiles();
@@ -243,24 +246,4 @@ function initLeafletController(initContext) {
 
     legendControl.addTo(map);
   }
-}
-
-function xhrGet(url, onGot) {
-  var request = new XMLHttpRequest();
-  request.open('GET', url, true);
-
-  request.onreadystatechange = function() {
-    if (this.readyState === 4) {
-      if (this.status >= 200 && this.status < 400) {
-        // Success!
-        onGot(undefined, this.responseText);
-      } else {
-        // Error :(
-        onGot(this, this.responseText)
-      }
-    }
-  };
-
-  request.send();
-  request = null;
 }

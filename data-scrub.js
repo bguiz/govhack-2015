@@ -31,5 +31,27 @@ fs.writeFile(
     if(err) {
         return console.log(err);
     }
-    console.log('File write success');
+    console.log('File write success - geoJson');
+});
+
+inFileName = './client/data/sa2-xxxx-aust-data.json';
+outFileName = './client/data/sa2-xxxx-aust-data-clean.json';
+var data = require(inFileName);
+var key, val;
+for (key in data) {
+  if (data.hasOwnProperty(key)) {
+    val = data[key];
+    data[key] = val[0];
+  }
+}
+fs.writeFile(
+  outFileName,
+  (isPretty ?
+    JSON.stringify(data, undefined, 2) :
+    JSON.stringify(data)),
+  function onWroteFile(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log('File write success - data');
 });

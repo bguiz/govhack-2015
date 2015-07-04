@@ -2,7 +2,8 @@
 
 SoMo is **The Social Mobility Indicator**
 
-SoMo is being created as part of [Govhack 2015](https://www.govhack.org/govhack-2015),
+SoMo is being created as part of
+[Govhack 2015](https://www.govhack.org/govhack-2015),
 a 48-hour hackathon.
 
 ## How it works
@@ -12,6 +13,15 @@ a 48-hour hackathon.
 ## Call to action
 
 //TODO
+
+## Running
+
+To serve the content locally as a static web server:
+
+```bash
+npm i -g puer
+./run.sh
+```
 
 ## Team
 

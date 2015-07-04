@@ -3,7 +3,7 @@
 setUpListeners();
 
 function setUpListeners() {
-`  ['sa2-xxxx-aust-data-clean']
+  ['sa2-xxxx-aust-data-clean']
     .forEach(function(dataSetId) {
       var elem = document.getElementById(dataSetId);
       elem.addEventListener('click', function onSelectDataSet() {
@@ -33,14 +33,34 @@ function displayDataSet(dataSetId) {
       return feature;
     });
 
+    var colourScale = window.chroma
+      .scale(
+          ['#eda0ff', '#002680'], // colors
+          [0, 1]  // positions
+        )
+        .domain([1, 1000], 8)
+        .mode('rgb');
+
     leafletController.set.context({
-      getPropertyValue: function getPropertyValue(props) {
-        return props.MedianHousePrice;
-      },
-      getPropertyDisplayName: function getPropertyDisplayName(props) {
-        return 'Median House Price';
-      },
+      getPropertyValue: getPropertyValue,
+      getPropertyDisplayName: getPropertyDisplayName,
+      getPropertyColour: getPropertyColour,
+      getPropertyColourDomain: getPropertyColourDomain,
     });
+    function getPropertyValue(props) {
+      return props.MedianHousePrice;
+    }
+    function getPropertyDisplayName(props) {
+      return 'Median House Price';
+    }
+    function getPropertyColour(props) {
+      return colourScale(getPropertyValue(props))
+    }
+    function getPropertyColourDomain(d) {
+      return colourScale.domain();
+    }
+
+    leafletController.add.legendControl();
     leafletController.add.geoJsonLayer(geoJsonResult);
   });
 }

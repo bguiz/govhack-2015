@@ -223,8 +223,14 @@ function initLeafletController(initContext) {
   function addAttributionControl() {
     map.attributionControl
       .addAttribution(
-        'Population data &copy; <a href="http://abs.gov.au/">' +
-        'Australian Bureau of Statistics</a>');
+        'Data &copy; <a href="http://abs.gov.au/">' +
+        'Australian Bureau of Statistics</a>' +
+        ' & <a href="http://abs.gov.au/">' +
+        'Australian Tax Office</a>' +
+        ' & <a href="http://data.nsw.gov.au/">' +
+        'DataNSW</a>' +
+        ' & <a href="http://nationalmap.nicta.com.au/">' +
+        'NICTA National Map</a> ');
   }
 
   function addLegendControl() {

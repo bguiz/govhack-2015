@@ -14,20 +14,23 @@ function setUpListeners() {
   ['ste-2016-2061-schools-data-clean']
     .forEach(function eachDataSetWithRangeSliderId(dataSetId) {
       var elem = document.getElementById(dataSetId);
+      var displayElem = document.getElementById('range-value-'+dataSetId);
 
       loadDataSet(dataSetId, function onDone(err, results) {
-
-        elem.addEventListener('input', function onRangeInput() {
-          var rangeValue = this.value;
-          this.setAttribute('value', rangeValue);
+        updateDataSet();
+        elem.addEventListener('input', updateDataSet, false);
+        function updateDataSet() {
+          var rangeValue = elem.value;
+          elem.setAttribute('value', rangeValue);
           console.log('onRangeInput', rangeValue);
           var dataSet = results[''+rangeValue];
           var err;
           if (!dataSet) {
             err = 'No data set found for '+rangeValue;
           }
+          displayElem.innerHTML = ''+rangeValue;
           displayDataSet(err, dataSet);
-        }, false);
+        }
       });
 
 

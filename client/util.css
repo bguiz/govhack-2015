@@ -6,8 +6,12 @@ body {
 }
 
 .slider-container {
-  margin-top: 50px;
+  margin-top: 6px;
   margin-left: 300px;
+}
+
+.slider-container > input[type='range'] {
+  margin-top: 48px;
 }
 
 /*

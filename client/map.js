@@ -16,7 +16,10 @@ leafletController.add.legendControl();
 
 var geoJsonResult;
 
-xhrGet('data/sa2-2011-aust-001p-with-props.json', function onGot(err, result) {
+var geoJsonId;
+// geoJsonId = 'sa2-2011-aust-001p-with-props';
+geoJsonId = 'ste-2011-aust-0001p-with-props';
+xhrGet('data/'+geoJsonId+'.json', function onGot(err, result) {
   if (err) {
     console.error(err);
     return;
@@ -118,8 +121,8 @@ function initLeafletController(initContext) {
 
   function addTiles() {
     map
-      // Sydney, NSW: 33.8650° S, 151.2094° E
-      .setView([-33.8650, 151.2094], 10);
+      // .setView([-33.8650, 151.2094], 10);  // Sydney, NSW: 33.8650° S, 151.2094° E
+      .setView([-28, 138], 4.0);           // Centre of Australia: 28° S, 138° E
 
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
       maxZoom: 18,
@@ -220,8 +223,14 @@ function initLeafletController(initContext) {
   function addAttributionControl() {
     map.attributionControl
       .addAttribution(
-        'Population data &copy; <a href="http://abs.gov.au/">' +
-        'Australian Bureau of Statistics</a>');
+        'Data &copy; <a href="http://abs.gov.au/">' +
+        'Australian Bureau of Statistics</a>' +
+        ' & <a href="http://abs.gov.au/">' +
+        'Australian Tax Office</a>' +
+        ' & <a href="http://data.nsw.gov.au/">' +
+        'DataNSW</a>' +
+        ' & <a href="http://nationalmap.nicta.com.au/">' +
+        'NICTA National Map</a> ');
   }
 
   function addLegendControl() {

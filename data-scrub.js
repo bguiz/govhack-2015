@@ -20,16 +20,6 @@ var features = geoJsonSa2.features.map(function eachFeature(feature) {
     area: feature.properties.ALBERS_SQM,
   };
   feature.properties = props;
-  // feature.properties.id = feature.properties.SA2_MAIN11;
-  // feature.properties.name = feature.properties.SA2_NAME11;
-  // feature.properties.stateId = feature.properties.STE_CODE11;
-  // feature.properties.area = feature.properties.ALBERS_SQM;
-  // ['SA2_MAIN11', 'SA2_5DIG11', 'SA2_NAME11', 'SA3_CODE11', 'SA3_NAME11',
-  //   'SA4_CODE11', 'SA4_NAME11', 'GCC_CODE11', 'GCC_NAME11', 'STE_CODE11',
-  //   'STE_NAME11', 'ALBERS_SQM']
-  //   .forEach(function eachUnwantedProperty(unwantedPropertyName) {
-  //     feature.properties[unwantedPropertyName] = undefined;
-  //   });
   return feature;
 });
 geoJsonSa2.features = features;
@@ -59,13 +49,6 @@ var featuresSte = geoJsonSte.features.map(function eachFeature(feature) {
     area: feature.properties.ALBERS_SQM,
   };
   feature.properties = props;
-  // feature.properties.id = feature.properties.STE_CODE11;
-  // feature.properties.name = feature.properties.STE_NAME11;
-  // feature.properties.area = feature.properties.ALBERS_SQM;
-  // ['STE_CODE11', 'STE_NAME11', 'ALBERS_SQM']
-  //   .forEach(function eachUnwantedProperty(unwantedPropertyName) {
-  //     feature.properties[unwantedPropertyName] = undefined;
-  //   });
   return feature;
 });
 geoJsonSte.features = featuresSte;
@@ -87,22 +70,75 @@ fs.writeFile(
 
 inFileName = './client/data/sa2-xxxx-aust-data.json';
 outFileName = './client/data/sa2-xxxx-aust-data-clean.json';
-var data = require(inFileName);
+var dataDummy = require(inFileName);
 var key, val;
-for (key in data) {
-  if (data.hasOwnProperty(key)) {
-    val = data[key];
-    data[key] = val[0];
+for (key in dataDummy) {
+  if (dataDummy.hasOwnProperty(key)) {
+    val = dataDummy[key];
+    dataDummy[key] = val[0];
   }
 }
 fs.writeFile(
   outFileName,
   (isPretty ?
-    JSON.stringify(data, undefined, 2) :
-    JSON.stringify(data)),
+    JSON.stringify(dataDummy, undefined, 2) :
+    JSON.stringify(dataDummy)),
   function onWroteFile(err) {
     if(err) {
         return console.log(err);
     }
-    console.log('File write success - data');
+    console.log('File write success - dataDummy');
+});
+
+// Schools time series data
+
+var stateLetterCodeToStateId = {
+  NSW: 1,
+  VIC: 2,
+  QLD: 3,
+  SA: 4,
+  WA: 5,
+  TAS: 6,
+  NT: 7,
+  ACT: 8,
+  OTHER: 9,
+};
+function getStateCodeFromLetterCode(code) {
+  var code = code.toUpperCase();
+  return stateLetterCodeToStateId[code];
+}
+
+inFileName = './client/data/ste-2016-2061-schools-data.json';
+outFileName = './client/data/ste-2016-2061-schools-data-clean.json';
+var dataSchools = require(inFileName);
+var year, state;
+var yearVal, yearStateVal;
+var yearCode, stateCode;
+for (year in dataSchools) {
+  if (dataSchools.hasOwnProperty(year)) {
+    yearVal = dataSchools[year];
+    yearCode = year.split('-')[1];
+    dataSchools[''+yearCode] = yearVal;
+    dataSchools[year] = undefined;
+    for (state in yearVal) {
+      if (yearVal.hasOwnProperty(state)) {
+        yearStateVal = yearVal[state];
+        stateCode = getStateCodeFromLetterCode(state.split('.')[0]);
+        yearVal[''+stateCode] = yearStateVal[0];
+        yearVal[state] = undefined;
+      }
+    }
+  }
+}
+
+fs.writeFile(
+  outFileName,
+  (isPretty ?
+    JSON.stringify(dataSchools, undefined, 2) :
+    JSON.stringify(dataSchools)),
+  function onWroteFile(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log('File write success - dataSchools');
 });

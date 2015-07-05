@@ -225,7 +225,7 @@ function initLeafletController(initContext) {
       .addAttribution(
         'Data &copy; <a href="http://abs.gov.au/">' +
         'Australian Bureau of Statistics</a>' +
-        ' & <a href="http://abs.gov.au/">' +
+        ' & <a href="http://ato.gov.au/">' +
         'Australian Tax Office</a>' +
         ' & <a href="http://data.nsw.gov.au/">' +
         'DataNSW</a>' +

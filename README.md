@@ -1,22 +1,31 @@
-# SoMo
+# School of Rock
 
-SoMo is **The Social Mobility Indicator**
+School of Rock predicts future infrastructure needs,
+based on robust data and enhanced statistical visualistion.
 
-SoMo is being created as part of
+We hope that it is used by state and federal governments
+in planning for future needs.
+
+School of Rock is being created as part of
 [Govhack 2015](https://www.govhack.org/govhack-2015),
 a 48-hour hackathon.
 
+## Demo
+
+View our demo where we predict the number of **schools** needed
+here: [**Demo**](http://blog.bguiz.com/demo/govhack-2015/client/)
+
 ## How it works
 
-//TODO
-
-## Call to action
-
-//TODO
+Simply drag the slider to see the forecast infrastructure needs!
 
 ## Data sets used
 
-//TODO
+- [ABS](http://abs.gov.au/)
+- [ABS.Stat](http://stat.abs.gov.au/)
+- [ATO](http://ato.gov.au/)
+- [DataNSW](http://abs.gov.au/)
+- [NICTA National Map](http://nationalmap.nicta.com.au/)
 
 ## Running
 

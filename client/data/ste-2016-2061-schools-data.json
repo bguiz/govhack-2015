@@ -1,0 +1,2302 @@
+{
+  "Jun-2016": {
+    "nsw.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 1,
+        "schools": 0
+      }
+    ]
+  },
+  "Jun-2017": {
+    "nsw.school": [
+      {
+        "var1": 2,
+        "schools": 62
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 2,
+        "schools": 86
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 2,
+        "schools": 77
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 2,
+        "schools": 17
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 2,
+        "schools": 2
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 2,
+        "schools": 7
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 2,
+        "schools": 61
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 2,
+        "schools": 2
+      }
+    ]
+  },
+  "Jun-2018": {
+    "nsw.school": [
+      {
+        "var1": 3,
+        "schools": 134
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 3,
+        "schools": 179
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 3,
+        "schools": 162
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 3,
+        "schools": 34
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 3,
+        "schools": 4
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 3,
+        "schools": 16
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 3,
+        "schools": 128
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 3,
+        "schools": 5
+      }
+    ]
+  },
+  "Jun-2019": {
+    "nsw.school": [
+      {
+        "var1": 4,
+        "schools": 207
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 4,
+        "schools": 275
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 4,
+        "schools": 255
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 4,
+        "schools": 53
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 4,
+        "schools": 7
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 4,
+        "schools": 23
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 4,
+        "schools": 200
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 4,
+        "schools": 9
+      }
+    ]
+  },
+  "Jun-2020": {
+    "nsw.school": [
+      {
+        "var1": 5,
+        "schools": 282
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 5,
+        "schools": 370
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 5,
+        "schools": 348
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 5,
+        "schools": 70
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 5,
+        "schools": 10
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 5,
+        "schools": 31
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 5,
+        "schools": 273
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 5,
+        "schools": 13
+      }
+    ]
+  },
+  "Jun-2021": {
+    "nsw.school": [
+      {
+        "var1": 6,
+        "schools": 354
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 6,
+        "schools": 468
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 6,
+        "schools": 437
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 6,
+        "schools": 89
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 6,
+        "schools": 13
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 6,
+        "schools": 39
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 6,
+        "schools": 348
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 6,
+        "schools": 16
+      }
+    ]
+  },
+  "Jun-2022": {
+    "nsw.school": [
+      {
+        "var1": 7,
+        "schools": 420
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 7,
+        "schools": 558
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 7,
+        "schools": 523
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 7,
+        "schools": 105
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 7,
+        "schools": 16
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 7,
+        "schools": 46
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 7,
+        "schools": 423
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 7,
+        "schools": 19
+      }
+    ]
+  },
+  "Jun-2023": {
+    "nsw.school": [
+      {
+        "var1": 8,
+        "schools": 489
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 8,
+        "schools": 652
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 8,
+        "schools": 614
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 8,
+        "schools": 123
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 8,
+        "schools": 19
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 8,
+        "schools": 53
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 8,
+        "schools": 498
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 8,
+        "schools": 22
+      }
+    ]
+  },
+  "Jun-2024": {
+    "nsw.school": [
+      {
+        "var1": 9,
+        "schools": 559
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 9,
+        "schools": 743
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 9,
+        "schools": 704
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 9,
+        "schools": 139
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 9,
+        "schools": 22
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 9,
+        "schools": 61
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 9,
+        "schools": 574
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 9,
+        "schools": 24
+      }
+    ]
+  },
+  "Jun-2025": {
+    "nsw.school": [
+      {
+        "var1": 10,
+        "schools": 628
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 10,
+        "schools": 837
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 10,
+        "schools": 795
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 10,
+        "schools": 154
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 10,
+        "schools": 26
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 10,
+        "schools": 68
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 10,
+        "schools": 652
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 10,
+        "schools": 27
+      }
+    ]
+  },
+  "Jun-2026": {
+    "nsw.school": [
+      {
+        "var1": 11,
+        "schools": 696
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 11,
+        "schools": 928
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 11,
+        "schools": 890
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 11,
+        "schools": 169
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 11,
+        "schools": 29
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 11,
+        "schools": 74
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 11,
+        "schools": 730
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 11,
+        "schools": 30
+      }
+    ]
+  },
+  "Jun-2027": {
+    "nsw.school": [
+      {
+        "var1": 12,
+        "schools": 772
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 12,
+        "schools": 1025
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 12,
+        "schools": 993
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 12,
+        "schools": 185
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 12,
+        "schools": 32
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 12,
+        "schools": 82
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 12,
+        "schools": 812
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 12,
+        "schools": 33
+      }
+    ]
+  },
+  "Jun-2028": {
+    "nsw.school": [
+      {
+        "var1": 13,
+        "schools": 837
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 13,
+        "schools": 1109
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 13,
+        "schools": 1088
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 13,
+        "schools": 197
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 13,
+        "schools": 35
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 13,
+        "schools": 88
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 13,
+        "schools": 890
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 13,
+        "schools": 36
+      }
+    ]
+  },
+  "Jun-2029": {
+    "nsw.school": [
+      {
+        "var1": 14,
+        "schools": 901
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 14,
+        "schools": 1188
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 14,
+        "schools": 1179
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 14,
+        "schools": 208
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 14,
+        "schools": 38
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 14,
+        "schools": 94
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 14,
+        "schools": 967
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 14,
+        "schools": 39
+      }
+    ]
+  },
+  "Jun-2030": {
+    "nsw.school": [
+      {
+        "var1": 15,
+        "schools": 963
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 15,
+        "schools": 1264
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 15,
+        "schools": 1269
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 15,
+        "schools": 218
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 15,
+        "schools": 41
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 15,
+        "schools": 100
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 15,
+        "schools": 1042
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 15,
+        "schools": 42
+      }
+    ]
+  },
+  "Jun-2031": {
+    "nsw.school": [
+      {
+        "var1": 16,
+        "schools": 1022
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 16,
+        "schools": 1336
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 16,
+        "schools": 1357
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 16,
+        "schools": 228
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 16,
+        "schools": 44
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 16,
+        "schools": 106
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 16,
+        "schools": 1113
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 16,
+        "schools": 44
+      }
+    ]
+  },
+  "Jun-2032": {
+    "nsw.school": [
+      {
+        "var1": 17,
+        "schools": 1077
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 17,
+        "schools": 1404
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 17,
+        "schools": 1442
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 17,
+        "schools": 237
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 17,
+        "schools": 47
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 17,
+        "schools": 112
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 17,
+        "schools": 1182
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 17,
+        "schools": 46
+      }
+    ]
+  },
+  "Jun-2033": {
+    "nsw.school": [
+      {
+        "var1": 18,
+        "schools": 1129
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 18,
+        "schools": 1468
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 18,
+        "schools": 1522
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 18,
+        "schools": 244
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 18,
+        "schools": 49
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 18,
+        "schools": 117
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 18,
+        "schools": 1246
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 18,
+        "schools": 48
+      }
+    ]
+  },
+  "Jun-2034": {
+    "nsw.school": [
+      {
+        "var1": 19,
+        "schools": 1178
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 19,
+        "schools": 1528
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 19,
+        "schools": 1600
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 19,
+        "schools": 251
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 19,
+        "schools": 52
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 19,
+        "schools": 122
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 19,
+        "schools": 1308
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 19,
+        "schools": 50
+      }
+    ]
+  },
+  "Jun-2035": {
+    "nsw.school": [
+      {
+        "var1": 20,
+        "schools": 1224
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 20,
+        "schools": 1584
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 20,
+        "schools": 1674
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 20,
+        "schools": 257
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 20,
+        "schools": 54
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 20,
+        "schools": 127
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 20,
+        "schools": 1366
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 20,
+        "schools": 51
+      }
+    ]
+  },
+  "Jun-2036": {
+    "nsw.school": [
+      {
+        "var1": 21,
+        "schools": 1267
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 21,
+        "schools": 1638
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 21,
+        "schools": 1746
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 21,
+        "schools": 263
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 21,
+        "schools": 57
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 21,
+        "schools": 132
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 21,
+        "schools": 1422
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 21,
+        "schools": 52
+      }
+    ]
+  },
+  "Jun-2037": {
+    "nsw.school": [
+      {
+        "var1": 22,
+        "schools": 1309
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 22,
+        "schools": 1689
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 22,
+        "schools": 1816
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 22,
+        "schools": 269
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 22,
+        "schools": 59
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 22,
+        "schools": 137
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 22,
+        "schools": 1476
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 22,
+        "schools": 53
+      }
+    ]
+  },
+  "Jun-2038": {
+    "nsw.school": [
+      {
+        "var1": 23,
+        "schools": 1348
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 23,
+        "schools": 1739
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 23,
+        "schools": 1884
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 23,
+        "schools": 274
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 23,
+        "schools": 61
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 23,
+        "schools": 141
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 23,
+        "schools": 1528
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 23,
+        "schools": 54
+      }
+    ]
+  },
+  "Jun-2039": {
+    "nsw.school": [
+      {
+        "var1": 24,
+        "schools": 1387
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 24,
+        "schools": 1788
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 24,
+        "schools": 1951
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 24,
+        "schools": 279
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 24,
+        "schools": 64
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 24,
+        "schools": 146
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 24,
+        "schools": 1579
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 24,
+        "schools": 54
+      }
+    ]
+  },
+  "Jun-2040": {
+    "nsw.school": [
+      {
+        "var1": 25,
+        "schools": 1426
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 25,
+        "schools": 1837
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 25,
+        "schools": 2017
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 25,
+        "schools": 285
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 25,
+        "schools": 66
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 25,
+        "schools": 150
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 25,
+        "schools": 1628
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 25,
+        "schools": 55
+      }
+    ]
+  },
+  "Jun-2041": {
+    "nsw.school": [
+      {
+        "var1": 26,
+        "schools": 1465
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 26,
+        "schools": 1887
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 26,
+        "schools": 2083
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 26,
+        "schools": 290
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 26,
+        "schools": 68
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 26,
+        "schools": 155
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 26,
+        "schools": 1678
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 26,
+        "schools": 56
+      }
+    ]
+  },
+  "Jun-2042": {
+    "nsw.school": [
+      {
+        "var1": 27,
+        "schools": 1505
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 27,
+        "schools": 1938
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 27,
+        "schools": 2149
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 27,
+        "schools": 297
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 27,
+        "schools": 71
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 27,
+        "schools": 160
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 27,
+        "schools": 1727
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 27,
+        "schools": 56
+      }
+    ]
+  },
+  "Jun-2043": {
+    "nsw.school": [
+      {
+        "var1": 28,
+        "schools": 1546
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 28,
+        "schools": 1990
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 28,
+        "schools": 2216
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 28,
+        "schools": 303
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 28,
+        "schools": 73
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 28,
+        "schools": 164
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 28,
+        "schools": 1778
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 28,
+        "schools": 57
+      }
+    ]
+  },
+  "Jun-2044": {
+    "nsw.school": [
+      {
+        "var1": 29,
+        "schools": 1590
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 29,
+        "schools": 2045
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 29,
+        "schools": 2286
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 29,
+        "schools": 311
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 29,
+        "schools": 76
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 29,
+        "schools": 169
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 29,
+        "schools": 1830
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 29,
+        "schools": 58
+      }
+    ]
+  },
+  "Jun-2045": {
+    "nsw.school": [
+      {
+        "var1": 30,
+        "schools": 1636
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 30,
+        "schools": 2103
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 30,
+        "schools": 2358
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 30,
+        "schools": 319
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 30,
+        "schools": 79
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 30,
+        "schools": 175
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 30,
+        "schools": 1883
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 30,
+        "schools": 59
+      }
+    ]
+  },
+  "Jun-2046": {
+    "nsw.school": [
+      {
+        "var1": 31,
+        "schools": 1685
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 31,
+        "schools": 2164
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 31,
+        "schools": 2433
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 31,
+        "schools": 327
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 31,
+        "schools": 82
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 31,
+        "schools": 180
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 31,
+        "schools": 1939
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 31,
+        "schools": 60
+      }
+    ]
+  },
+  "Jun-2047": {
+    "nsw.school": [
+      {
+        "var1": 32,
+        "schools": 1737
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 32,
+        "schools": 2228
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 32,
+        "schools": 2511
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 32,
+        "schools": 337
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 32,
+        "schools": 85
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 32,
+        "schools": 186
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 32,
+        "schools": 1997
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 32,
+        "schools": 62
+      }
+    ]
+  },
+  "Jun-2048": {
+    "nsw.school": [
+      {
+        "var1": 33,
+        "schools": 1791
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 33,
+        "schools": 2295
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 33,
+        "schools": 2592
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 33,
+        "schools": 347
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 33,
+        "schools": 88
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 33,
+        "schools": 192
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 33,
+        "schools": 2057
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 33,
+        "schools": 64
+      }
+    ]
+  },
+  "Jun-2049": {
+    "nsw.school": [
+      {
+        "var1": 34,
+        "schools": 1848
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 34,
+        "schools": 2365
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 34,
+        "schools": 2675
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 34,
+        "schools": 357
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 34,
+        "schools": 92
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 34,
+        "schools": 198
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 34,
+        "schools": 2118
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 34,
+        "schools": 65
+      }
+    ]
+  },
+  "Jun-2050": {
+    "nsw.school": [
+      {
+        "var1": 35,
+        "schools": 1906
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 35,
+        "schools": 2437
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 35,
+        "schools": 2760
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 35,
+        "schools": 368
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 35,
+        "schools": 95
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 35,
+        "schools": 205
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 35,
+        "schools": 2182
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 35,
+        "schools": 67
+      }
+    ]
+  },
+  "Jun-2051": {
+    "nsw.school": [
+      {
+        "var1": 36,
+        "schools": 1967
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 36,
+        "schools": 2512
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 36,
+        "schools": 2847
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 36,
+        "schools": 380
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 36,
+        "schools": 99
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 36,
+        "schools": 211
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 36,
+        "schools": 2247
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 36,
+        "schools": 69
+      }
+    ]
+  },
+  "Jun-2052": {
+    "nsw.school": [
+      {
+        "var1": 37,
+        "schools": 2029
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 37,
+        "schools": 2588
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 37,
+        "schools": 2936
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 37,
+        "schools": 391
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 37,
+        "schools": 102
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 37,
+        "schools": 218
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 37,
+        "schools": 2314
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 37,
+        "schools": 71
+      }
+    ]
+  },
+  "Jun-2053": {
+    "nsw.school": [
+      {
+        "var1": 38,
+        "schools": 2092
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 38,
+        "schools": 2666
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 38,
+        "schools": 3026
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 38,
+        "schools": 403
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 38,
+        "schools": 106
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 38,
+        "schools": 225
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 38,
+        "schools": 2382
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 38,
+        "schools": 73
+      }
+    ]
+  },
+  "Jun-2054": {
+    "nsw.school": [
+      {
+        "var1": 39,
+        "schools": 2156
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 39,
+        "schools": 2744
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 39,
+        "schools": 3116
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 39,
+        "schools": 415
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 39,
+        "schools": 110
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 39,
+        "schools": 232
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 39,
+        "schools": 2451
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 39,
+        "schools": 76
+      }
+    ]
+  },
+  "Jun-2055": {
+    "nsw.school": [
+      {
+        "var1": 40,
+        "schools": 2220
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 40,
+        "schools": 2823
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 40,
+        "schools": 3208
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 40,
+        "schools": 427
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 40,
+        "schools": 114
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 40,
+        "schools": 239
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 40,
+        "schools": 2520
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 40,
+        "schools": 78
+      }
+    ]
+  },
+  "Jun-2056": {
+    "nsw.school": [
+      {
+        "var1": 41,
+        "schools": 2284
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 41,
+        "schools": 2902
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 41,
+        "schools": 3299
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 41,
+        "schools": 438
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 41,
+        "schools": 118
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 41,
+        "schools": 246
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 41,
+        "schools": 2590
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 41,
+        "schools": 80
+      }
+    ]
+  },
+  "Jun-2057": {
+    "nsw.school": [
+      {
+        "var1": 42,
+        "schools": 2347
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 42,
+        "schools": 2981
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 42,
+        "schools": 3390
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 42,
+        "schools": 450
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 42,
+        "schools": 122
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 42,
+        "schools": 254
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 42,
+        "schools": 2660
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 42,
+        "schools": 82
+      }
+    ]
+  },
+  "Jun-2058": {
+    "nsw.school": [
+      {
+        "var1": 43,
+        "schools": 2410
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 43,
+        "schools": 3058
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 43,
+        "schools": 3480
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 43,
+        "schools": 461
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 43,
+        "schools": 126
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 43,
+        "schools": 261
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 43,
+        "schools": 2729
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 43,
+        "schools": 84
+      }
+    ]
+  },
+  "Jun-2059": {
+    "nsw.school": [
+      {
+        "var1": 44,
+        "schools": 2472
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 44,
+        "schools": 3135
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 44,
+        "schools": 3569
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 44,
+        "schools": 471
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 44,
+        "schools": 129
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 44,
+        "schools": 268
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 44,
+        "schools": 2798
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 44,
+        "schools": 86
+      }
+    ]
+  },
+  "Jun-2060": {
+    "nsw.school": [
+      {
+        "var1": 45,
+        "schools": 2532
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 45,
+        "schools": 3209
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 45,
+        "schools": 3657
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 45,
+        "schools": 482
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 45,
+        "schools": 133
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 45,
+        "schools": 274
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 45,
+        "schools": 2867
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 45,
+        "schools": 87
+      }
+    ]
+  },
+  "Jun-2061": {
+    "nsw.school": [
+      {
+        "var1": 46,
+        "schools": 2591
+      }
+    ],
+    "vic.school": [
+      {
+        "var1": 46,
+        "schools": 3282
+      }
+    ],
+    "qld.school": [
+      {
+        "var1": 46,
+        "schools": 3744
+      }
+    ],
+    "sa.school": [
+      {
+        "var1": 46,
+        "schools": 491
+      }
+    ],
+    "nt.school": [
+      {
+        "var1": 46,
+        "schools": 137
+      }
+    ],
+    "act.school": [
+      {
+        "var1": 46,
+        "schools": 281
+      }
+    ],
+    "wa.school": [
+      {
+        "var1": 46,
+        "schools": 2934
+      }
+    ],
+    "tas.school": [
+      {
+        "var1": 46,
+        "schools": 89
+      }
+    ]
+  }
+}

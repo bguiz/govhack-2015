@@ -4,11 +4,21 @@ setUpListeners();
 
 function setUpListeners() {
   ['sa2-xxxx-aust-data-clean']
-    .forEach(function(dataSetId) {
+    .forEach(function eachDataSetId(dataSetId) {
       var elem = document.getElementById(dataSetId);
       elem.addEventListener('click', function onSelectDataSet() {
         loadDataSet(dataSetId);
-      });
+      }, false);
+    });
+
+  ['ste-2016-2061-schools-data-clean']
+    .forEach(function eachDataSetWithRangeSliderId(dataSetId) {
+      var elem = document.getElementById(dataSetId);
+
+      elem.addEventListener('input', function onRangeInput() {
+          this.setAttribute('value', this.value);
+        console.log('onRangeInput', this.value);
+      }, false);
     });
 }
 

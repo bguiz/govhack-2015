@@ -1,5 +1,6 @@
 'use strict';
 
+
 var leafletController;
 leafletController = initLeafletController({
   // geoJsonData: result,
@@ -16,37 +17,6 @@ leafletController.add.legendControl();
 
 var geoJsonResult;
 
-var geoJsonId;
-// geoJsonId = 'sa2-2011-aust-001p-with-props';
-geoJsonId = 'ste-2011-aust-0001p-with-props';
-xhrGet('data/'+geoJsonId+'.json', function onGot(err, result) {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  result = JSON.parse(result);
-  geoJsonResult = result;
-  console.log('geoJsonData:', result);
-
-  leafletController.add.tiles();
-  leafletController.add.geoJsonLayer(result);
-  // testUpdateDummyData(result);
-});
-
-function testUpdateDummyData(result) {
-  // modify one chloropleth rendering affecting property,
-  // and another that does not.
-  // simply delay for a few second to simulate changing the dataset
-  setTimeout(function() {
-    result.features.map(function eachFeature(feature) {
-      feature.properties.area = feature.properties.area * 10;
-      feature.properties.name = feature.properties.name + ' (m)';
-      return feature;
-    });
-    leafletController.add.geoJsonLayer(result);
-  }, 3000);
-}
-
 function initLeafletController(initContext) {
   var context;
 
@@ -55,7 +25,9 @@ function initLeafletController(initContext) {
   var getPropertyValue;
   var getPropertyDisplayName;
   var getPropertyColour;
+  var getPropertyColourFromValue;
   var getPropertyColourDomain;
+  var filterGeoJson;
 
   var map;
   var geoJsonLayer;
@@ -99,15 +71,20 @@ function initLeafletController(initContext) {
   }
 
   function defaultGetPropertyColour(props) {
-    return getPropertyColourFromValue(getPropertyValue(props))
+    return getPropertyColourFromValue(getPropertyValue(props));
   }
 
   function defaultGetPropertyColourDomain() {
     return defaultColourScale.domain();
   }
 
-  function getPropertyColourFromValue(d) {
+  function defaultGetPropertyColourFromValue(d) {
     return defaultColourScale(d);
+  }
+
+  function defaultFilterGeoJson(geojson) {
+    // Null op as the default
+    return geojson;
   }
 
   function setContext(context) {
@@ -116,13 +93,17 @@ function initLeafletController(initContext) {
     getPropertyValue = context.getPropertyValue || defaultGetPropertyValue;
     getPropertyDisplayName = context.getPropertyDisplayName || defaultGetPropertyDisplayName;
     getPropertyColour = context.getPropertyColour || defaultGetPropertyColour;
+    getPropertyColourFromValue = context.getPropertyColourFromValue || defaultGetPropertyColourFromValue;
     getPropertyColourDomain = context.getPropertyColourDomain || defaultGetPropertyColourDomain;
+    filterGeoJson = context.filterGeoJson || defaultFilterGeoJson;
   }
 
   function addTiles() {
     map
       // .setView([-33.8650, 151.2094], 10);  // Sydney, NSW: 33.8650° S, 151.2094° E
-      .setView([-28, 138], 4.0);           // Centre of Australia: 28° S, 138° E
+      .setView([-33.67, 151.04], 8);       // Greater Sydney, NSW: 33.67° S, 151.04° E
+      // .setView([-33.081, 147.282], 6);     // Condobolin, NSW: 33.081° S, 147.282° E
+      // .setView([-28, 138], 4);           // Centre of Australia: 28° S, 138° E
 
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
       maxZoom: 18,
@@ -130,7 +111,9 @@ function initLeafletController(initContext) {
         '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="http://mapbox.com">Mapbox</a>',
       id: 'examples.map-20v6611k'
-    }).addTo(map);
+    })
+    .addTo(map)
+    .bringToBack();
   }
 
   function addInfoControl() {
@@ -144,10 +127,14 @@ function initLeafletController(initContext) {
     };
 
     infoControl.update = function (props) {
+      var propVal = !!props && getPropertyValue(props);
+      if (typeof propVal === 'undefined') {
+        propVal = '(unavailable)';
+      }
       this._div.innerHTML = '<h4>Australia</h4>' +
       (props ?
         '<b>' + getRegionName(props) + '</b><br />' +
-          getPropertyDisplayName(props) + ' ' + getPropertyValue(props)
+          getPropertyDisplayName(props) + ' ' + propVal
         : 'Hover over a region');
     };
 
@@ -155,7 +142,7 @@ function initLeafletController(initContext) {
   }
 
   function addGeoJsonLayer(data) {
-    geoJsonData = data;
+    geoJsonData = filterGeoJson(data);
 
     function style(feature) {
       return {
@@ -257,9 +244,9 @@ function initLeafletController(initContext) {
         to = parseInt(grades[i + 1], 10);
 
         labels.push(
-          '<i style="background:' + getPropertyColourFromValue(from + 1) + '"></i> ' +
+          '<i style="background:' + getPropertyColourFromValue(from) + '"></i> ' +
           from +
-          (to ? '&ndash;' + to : '+'));
+          (!isNaN(to) ? '&ndash;' + to : '+'));
       }
 
       div.innerHTML = labels.join('<br>');

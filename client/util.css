@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 body {
   background: linear-gradient(130deg, #543958 0%,#a06060 25%,#bea27b 50%,#9ca898 75%,#506d8d 100%) no-repeat center center fixed;
   background-size: cover;
@@ -12,6 +13,19 @@ body {
 
 .slider-container > input[type='range'] {
   margin-top: 48px;
+}
+
+.info-container {
+  margin: 20px;
+  padding: 6px;
+  background: rgba(241, 241, 241 , 0.75);
+}
+
+.github-button-container {
+  display: inline-block;
+  margin: 6px;
+  padding: 0;
+  border: none;
 }
 
 /*

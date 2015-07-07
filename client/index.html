@@ -5,17 +5,40 @@
   <meta charset="utf-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-37884921-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 <body>
   <div id="map"></div>
   <div>
-    <div class="slider-container">
+<!--     <div class="slider-container">
       <div id="range-value-ste-2016-2061-schools-data-clean"></div>
       <input id="ste-2016-2061-schools-data-clean" type="range" value="2016" min="2016" max="2061" step="1" />
+    </div> -->
+    <div class="slider-container">
+      <div id="range-value-sa2-2015-2061-schools-data-clean"></div>
+      <input id="sa2-2015-2061-schools-data-clean" type="range" value="2015" min="2015" max="2060" step="1" />
     </div>
-    <ul>
-      <li id="sa2-xxxx-aust-data-clean">sa2-xxxx-aust-data-clean</li>
-    </ul>
+  </div>
+  <div class="info-container">
+    <p>This project was built as part of Govhack 2015, and is open source, released under GPLv3.</p>
+    <p>The data sources used in this project are copyright their respective owners, and have been attributed accordingly.</p>
+    <p>More info available on the <a href="https://github.com/bguiz/govhack-2015/" alt="School of Rock on Github">Project Page</a></p>
+    <p class="github-button-container">
+      <iframe src="https://ghbtns.com/github-btn.html?user=bguiz&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </p>
+    <p class="github-button-container">
+      <iframe src="https://ghbtns.com/github-btn.html?user=bguiz&repo=govhack-2015&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </p>
+    <p class="github-button-container">
+      <iframe src="https://ghbtns.com/github-btn.html?user=bguiz&repo=govhack-2015&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </p>
   </div>
 
   <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>

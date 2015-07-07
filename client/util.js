@@ -1,5 +1,6 @@
 'use strict';
 
+
 function xhrGet(url, onGot) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);

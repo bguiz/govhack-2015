@@ -1,5 +1,6 @@
 'use strict';
 
+
 var fs = require('fs');
 
 var inFileName;
@@ -90,8 +91,6 @@ fs.writeFile(
     console.log('File write success - dataDummy');
 });
 
-// Schools time series data
-
 var stateLetterCodeToStateId = {
   NSW: 1,
   VIC: 2,
@@ -108,6 +107,45 @@ function getStateCodeFromLetterCode(code) {
   return stateLetterCodeToStateId[code];
 }
 
+// Schools sa2 time series data
+
+inFileName = './client/data/sa2-2015-2061-schools-data.json';
+outFileName = './client/data/sa2-2015-2061-schools-data-clean.json';
+var dataSchoolsSa2 = require(inFileName);
+var year, sa2code;
+var yearVal, yearSa2val;
+var updatedSa2code;
+for (year in dataSchoolsSa2) {
+  if (dataSchoolsSa2.hasOwnProperty(year)) {
+    yearVal = dataSchoolsSa2[year];
+    for (sa2code in yearVal) {
+      if (yearVal.hasOwnProperty(sa2code)) {
+        yearSa2val = yearVal[sa2code];
+        if (!yearSa2val.hasOwnProperty('schools')) {
+          yearSa2val.schools = 0;
+        }
+        updatedSa2code = sa2code.charAt(0) + sa2code.substr(2);
+        yearVal[''+updatedSa2code] = yearSa2val;
+        yearVal[sa2code] = undefined;
+      }
+    }
+  }
+}
+
+fs.writeFile(
+  outFileName,
+  (isPretty ?
+    JSON.stringify(dataSchoolsSa2, undefined, 2) :
+    JSON.stringify(dataSchoolsSa2)),
+  function onWroteFile(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log('File write success - dataSchoolsSa2');
+});
+
+// Schools time series data
+
 inFileName = './client/data/ste-2016-2061-schools-data.json';
 outFileName = './client/data/ste-2016-2061-schools-data-clean.json';
 var dataSchools = require(inFileName);
@@ -123,6 +161,9 @@ for (year in dataSchools) {
     for (state in yearVal) {
       if (yearVal.hasOwnProperty(state)) {
         yearStateVal = yearVal[state];
+        if (!yearStateVal.hasOwnProperty('schools')) {
+          yearStateVal.schools = 0;
+        }
         stateCode = getStateCodeFromLetterCode(state.split('.')[0]);
         yearVal[''+stateCode] = yearStateVal[0];
         yearVal[state] = undefined;
